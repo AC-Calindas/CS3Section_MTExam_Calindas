@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Features & Products</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/feature.css">
+</head>
+<body>
+    <header>
+        <h1>My Projects & Products</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html" class="active">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Explore My Featured Works</h2>
+                <p>Discover and explore my projects and digital products</p>
+            </div>
+        </section>
+
+
+        <div class="content-container">
+            <section class="main-sections">
+
+                <article class="feature-presentation">
+                    <div class="feature-photo">
+                        <img src="assets/bg_00005.png" alt="Feature photo">
+                    </div>
+                    <div class="feature-details">
+                        <h3>1337 Brand</h3>
+                        <p>Premium digital art assets for modern designers. Includes 400+ templates.</p>
+                        <p><strong>Includes:</strong> 11,000,000 design variants</p>
+                        <p><strong>Compatibility:</strong> Adobe After Effects | Blender | Cinema4d | MediBang Paint Pro</p>
+                    </div>
+                </article>
+
+
+
+                <article class="products-grid">
+                    <h3>My Digital Products</h3>
+                    <div class="grid-container">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <img src="assets/product1.png" alt="Product">
+                            <div class="product-details">
+                                <h4>Acheron Digital Art</h4>
+                                <p>Acheron Medibang project file || Honkai Star Rail</p>
+                                <ul>
+                                    <strong>File Contents:</strong><p>Acheron.mdp</p>
+                                </ul>
+                                <p class="price">$29.99</p>
+                                <button class="add-to-cart" data-id="1" data-name="Medibang file" data-price="49.99">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <img src="assets/product2.png" alt="Product">
+                            <div class="product-details">
+                                <h4>No Pole Edit</h4>
+                                <p>AMV Project file for self-learning and exploring</p>
+                                <ul>
+                                    <strong>File Contents:</strong><p>No Pole.aep <br> Assets/...</p>
+                                </ul>
+                                <p class="price">$19.99</p>
+                                <button class="add-to-cart" data-id="2" data-name="After Effects file" data-price="29.99">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <img src="assets/product3.png" alt="Product">
+                            <div class="product-details">
+                                <h4>Abstract 3D Animations Pack</h4>
+                                <p>Consists of Abstract 3d Animations. <br>All the videos are in 1920x1080</p>
+                                <ul>
+                                    <strong>File Contents:</strong><p>Link drive.txt</p>
+                                </ul>
+                                <p class="price">$69.99</p>
+                                <button class="add-to-cart" data-id="3" data-name="Editing Pack file" data-price="99.99">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <img src="assets/product4.png" alt="Product">
+                            <div class="product-details">
+                                <h4>New Year Pack 2025</h4>
+                                <p>THE PACK CONTAINS ++/ <br>15 PFS ( aep only)<br>Nature clip pack <br>Fonts 3d scenes 4 tutorials <br>// Made in after effects 2020//</p>
+                                <ul>
+                                    <strong>File Contents:</strong><p>aep files/... <br>Fonts/...<br>3D files/...<br>Tutorials/...</p>
+                                </ul>
+                                <p class="price">$99.99</p>
+                                <button class="add-to-cart" data-id="4" data-name="Editing Pack file" data-price="39.99">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+
+
+
+            <aside>
+                <div class="feature-logo">
+                    <img src="assets/brandlogo.png" alt="My Brand Logo">
+                </div>
+
+
+                <div class="cart-section">
+                    <h3>Your Cart</h3>
+                    <div class="cart-items">
+                        <!-- cart items will be added dynamically with js -->
+                        <p class="empty-cart">Your cart is empty</p>
+                    </div>
+                    <div class="cart-total">
+                        <p>Total: $<span id="total-price">0.00</span></p>
+                    </div>
+                    <button class="checkout-button">Proceed to Checkout</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+
+
+
+
+<div id="checkoutModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Checkout</h2>
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="address">Shipping Address</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="payment">Payment Method</label>
+          <select id="payment" name="payment" required>
+            <option value="">Select payment method</option>
+            <option value="Credit">Credit Card</option>
+            <option value="GCash">GCash</option>
+            <option value="Bank">Bank Transfer</option>
+          </select>
+        </div>
+        
+        <div class="cart-summary">
+          <h3>Order Summary</h3>
+          <div class="cart-items-list">
+
+
+
+          </div>
+          <div class="cart-total">
+            <p>Total: $<span id="modalTotalPrice">0.00</span></p>
+          </div>
+        </div>
+        
+        <button type="submit" class="submit-button">Complete Purchase</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Calindas's Professional Resume. All rights reserved.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

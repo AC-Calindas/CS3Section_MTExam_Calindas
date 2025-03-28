@@ -1,0 +1,463 @@
+:root {
+    --primary-color: #d034db;
+    --secondary-color: #502c4e;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+}
+
+nav ul li a.active {
+    background-color: var(--primary-color);
+}
+
+
+
+
+.hero {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../assets/bg_hero.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh; /* Full viewport height */
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    color: white;
+    padding: 8rem 2rem; 
+
+    /* background-blend-mode: overlay; */
+
+    text-align: center;
+    min-height: 30vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    
+
+    @media (max-width: 768px) {
+        .hero {
+            background-attachment: scroll; /* Disable parallax on mobile */
+            min-height: 80vh; /* Slightly shorter on mobile */
+            background-position: 75% center; /* Better focus on mobile */
+        }
+    }
+
+
+    @media (min-width: 2000px) {
+        .hero {
+            background-size: contain;
+            background-color: #000; /* Fallback color for ultra-wide */
+        }
+    }
+    
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+
+
+
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.main-sections {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+aside {
+    width: 20%;
+    min-width: 250px;
+}
+
+
+
+
+
+.section-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.section-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.section-card ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.section-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+.contact-form {
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+.contact-form:target {
+    animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+    0% { background-color: inherit; }
+    20% { background-color: rgba(var(--primary-color-rgb), 0.1); }
+    100% { background-color: inherit; }
+}
+
+.contact-form.highlight {
+    animation: pulseHighlight 2s ease;
+}
+
+@keyframes pulseHighlight {
+    0% { box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(var(--primary-color-rgb), 0); }
+    100% { box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0); }
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-button:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+
+
+.portrait-container {
+    margin-bottom: 1.5rem;
+}
+
+.portrait {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.personal-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.personal-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.personal-info p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: var(--transition);
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/* contact form popup */
+.contact-form.success {
+    animation: formSuccess 2s ease;
+    position: relative;
+}
+
+.contact-form.success::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(46, 204, 113, 0.1);
+    border-radius: 8px;
+    z-index: -1;
+    animation: fadeInOverlay 0.5s ease;
+}
+
+@keyframes formSuccess {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 1rem;
+    background: #2ecc71;
+    color: white;
+    border-radius: 4px;
+    margin-top: 1rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-message.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Reset Button */
+.reset-form {
+    display: none;
+    margin-top: 1rem;
+    background: #3498db;
+    color: white;
+}
+
+.success .reset-form {
+    display: inline-block;
+    animation: fadeIn 0.5s ease 0.5s both;
+}
+
+
+
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+    
+    .main-sections {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    aside {
+        width: 100%;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #f1f1f1;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+}

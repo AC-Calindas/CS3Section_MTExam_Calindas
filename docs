@@ -1,0 +1,45 @@
+
+Solve the Problem Scenario below using web technologies (HTML, CSS, JavaScript – if necessary) 
+applying all learnings during the midterms of the semester. 
+Develop all source code with documentation by implementing comments and submit the following the folder structure down below:
+
+
+; •	Develop a website with the following specifications:
+; o	Development of a Landing Page (Two-Page Website):
+; 	The Home Page must contain the following elements:
+; •	Header (Title, Navbar [Home and Feature Page]), 
+; •	Hero Section, 
+; •	Section (Skills, Achievements, Trainings if applicable, Contact Information + Forms),
+; •	Aside (Your Professional Portrait Photo, 3:4 aspect ratio - 20% width scale + Personal Information)
+; •	Footer
+
+; 	The Feature Page must contain the following elements:
+; •	Header (Title, Navbar [Home and Feature Page]), 
+; •	Hero Section, 
+; •	Section 
+; o	Feature Presentation (Feature Photo + Feature Information/Details)
+; o	Presentation of Feature Products (Develop a Grid of 4 Columns)
+; 	Each Feature Product must be placed on a Feature Card (Product Photo, Product Details, Product Price, Add to Cart Button – functional with JS)  
+; •	Aside (20% width scale)
+; o	Feature Logo / Photo, 3:4 aspect ratio
+; o	Cart List (Product Name, Qty, and Price)
+; o	Total Price to be Paid
+; •	Footer
+
+
+
+
+
+
+
+
+
+
+•	Create a folder to store all source files.
+o	1 Folder (Name: CS3Section_MTExam_LastName  e.g CS3A_MTExam_DelaCruz)
+
+•	Create folder “assets” to store all optimized media (photos and videos), folder “css” for all your stylesheets, and folder “js” for all your javascript files.
+
+•	Link properly the web resources in your HTML files.
+
+•	Upload your exam resources and exam snapshots in your github repository and submit the repository link to the instructor.
